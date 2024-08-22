@@ -13,8 +13,10 @@ function News(props){
     
     const [articles,setArticles] = useState([]);
     const [total,setTotal] = useState(0);
+
+    const api_key = "enter_your_api_key_here"
     
-    var link = `https://newsapi.org/v2/top-headlines?country=in&page=${page}&category=${category}&pageSize=20&sortBy=popularity&apiKey=3d4cc2e047964abfa7c4d950477efd03`
+    var link = f`https://newsapi.org/v2/top-headlines?country=in&page=${page}&category=${category}&pageSize=20&sortBy=popularity&apiKey={api_key}`
     useEffect(()=>{
         
       const  fetchData =  async () =>{
